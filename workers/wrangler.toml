@@ -1,0 +1,25 @@
+name = "workers"
+type = "javascript"
+account_id = "1584acab866c3773ef3788ad3130675e"
+workers_dev = true
+compatibility_date = "2021-10-31"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
+
+[env.production]
+zone_id = "07eefb3230530a5b712dcc09b5d6dc24"
+route = "monitor.elbourki.com/api/token"
+kv_namespaces = [ 
+  { binding = "SOURCES", id = "f33e6b39035b46319a51e78222b3953b" }
+]
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+
+# [secrets]
+# TELEGRAM_BOT_SECRET
+# FAUNA_SECRET

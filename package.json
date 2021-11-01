@@ -1,0 +1,9 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "Monitor a website URL for changes and get instant notifications via Telegram!",
+  "workspaces": [
+    "frontend",
+    "workers"
+  ]
+}
